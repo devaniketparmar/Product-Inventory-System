@@ -1,81 +1,53 @@
+Build a basic Product Inventory System using the MERN (MongoDB, Express.js, React.js, Node.js) stack.
 
-# 🛒 Product Inventory System (MERN)
+Requirements:
+Product Management:
 
->A modern, full-stack inventory management app built with **MongoDB, Express.js, React.js, and Node.js**.
+Implement a form to add new products with the following fields:
 
----
+Name (must be unique)
 
-## 🚀 Features
+Description
 
-- **Add Products**
-	- Unique name, description, quantity, and multi-category selection (from seeded categories)
-- **Paginated Product Listing**
-	- Product name, categories (as tags), added date, and delete option
-	- Numbered pagination (1, 2, 3, ...)
-- **Filters**
-	- Search by product name
-	- Multi-select dropdown to filter by categories (shows products in any selected category)
-- **Validation & UX**
-	- Duplicate product names not allowed (server/client validation)
-	- User-friendly error and success feedback
-	- Modern, responsive UI (Tailwind + react-select)
+Quantity
 
----
+Categories (should support selecting multiple categories). These categories will be added into DB by a seeder, no need to create a section for its management.
 
-## 🏗️ Tech Stack
 
-- **Frontend:** React, Redux Toolkit, Tailwind CSS, react-select
-- **Backend:** Node.js, Express.js, MongoDB, Mongoose
+Listing Page:
 
----
 
-## 📦 Project Structure
+Create a paginated product listing with:
 
-```
-backend/
-	controllers/      # Express controllers
-	models/           # Mongoose models
-	routes/           # API routes
-	seeder/           # Category seeder
-	server.js         # Express entry point
-frontend/
-	src/
-		components/     # React UI components
-		slices/         # Redux slices
-		App.js          # Main app
-		...
-```
+Product name
 
----
+Categories (shown as tags/bubbles)
 
-## 📝 Requirements
+Product added on
 
-- Node.js, npm, MongoDB
+Option to delete a product
 
----
+Include numbered pagination (1, 2, 3, …).
 
-## 🛠️ Setup & Run
 
-1. **Install dependencies:**
-	 - `cd backend && npm install`
-	 - `cd ../frontend && npm install`
-2. **Seed categories:**
-	 - Categories are auto-seeded on backend start if DB is empty
-3. **Start servers:**
-	 - Backend: `npm start` (from backend folder)
-	 - Frontend: `npm start` (from frontend folder)
-4. **Open app:**
-	 - Visit [http://localhost:3000](http://localhost:3000)
+Filters:
 
----
 
-## 📋 Constraints & Best Practices
+Add the ability to search products by name.
 
-- No duplicate product names (enforced server & client)
-- Clean code structure, scalable for future features
-- Both client-side and server-side validation
-- Proper error handling and user feedback
-- Designed for performance and scalability
+Include a multi-select dropdown to filter by categories:
 
----
+If a product belongs to any of the selected categories, it should appear in the result.
+
+
+Constraints:
+Duplicate product names should not be allowed.
+
+Follow best practices for code structure, validation, and UI/UX.
+
+Implement both client-side and server-side validation.
+
+Proper error handling and user feedback should be provided
+
+Performance and scaling should be considered when setting up the structure.
 
